@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+    id 'application'
+    id 'idea'
+}
+
+group 'net.felium'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        showStandardStreams = true
+        events =  ["passed", "failed", "skipped"]
+    }
+}
+
+javafx {
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.media']
+    version = '11.0.2'
+}
+
+mainClassName = "net.felium.${rootProject.name}.Main"
