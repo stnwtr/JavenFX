@@ -2,7 +2,9 @@ package net.felium.javenfx;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -17,10 +19,9 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-//
-//    @FXEvent(phase=Phase.HANDLING, type=Type.MOUSE_CLICKED, only={Button.class})
-//    @FXEvent(phase=Phase.HANDLING, type=Type.MOUSE_MOVED, only={Pane.class})
-//    public void onButtonClickOrOnPaneMoved(Event event) {
-//        // button clicked
-//    }
+
+    @FXEvent(type = FXEventType.MOUSE_EVENT_MOUSE_CLICKED, targets = {Button.class, TextField.class}) // try to add/remove textfield
+    public void buttonClicked() {
+
+    }
 }
