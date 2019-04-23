@@ -27,9 +27,19 @@ public enum FXEventType {
     MOUSE_EVENT_MOUSE_MOVED(MouseEvent.MOUSE_MOVED),
 
     /**
+     * Fired on any key event
+     */
+    KEY_EVENT_ANY(KeyEvent.ANY),
+
+    /**
      * Fired when a key is pressed.
      */
-    KEY_EVENT_KEY_PRESSED(KeyEvent.KEY_PRESSED);
+    KEY_EVENT_KEY_PRESSED(KeyEvent.KEY_PRESSED),
+
+    /**
+     * Fired when a key is released.
+     */
+    KEY_EVENT_KEY_RELEASED(KeyEvent.KEY_RELEASED);
 
     /**
      * The {@link EventType} of the event.
