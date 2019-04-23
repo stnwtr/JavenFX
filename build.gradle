@@ -34,4 +34,4 @@ javafx {
     version = '11.0.2'
 }
 
-mainClassName = "net.felium.${rootProject.name}.Main"
+//mainClassName = "net.felium.${rootProject.name}.Main"
